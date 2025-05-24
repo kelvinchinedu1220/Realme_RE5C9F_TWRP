@@ -8,23 +8,7 @@
 DEVICE_PATH := device/realme/RE5C9F
 
 # For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := true
-
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    dtbo \
-    vendor_dlkm \
-    system \
-    vendor \
-    vbmeta \
-    vbmeta_vendor \
-    product \
-    odm \
-    system_ext \
-    boot \
-    vbmeta_system \
-    vendor_boot 
+ALLOW_MISSING_DEPENDENCIES := true 
 
 # Architecture
 TARGET_ARCH := arm64
@@ -212,6 +196,8 @@ TW_MTP_DEVICE := /dev/mtp_usb
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
 TW_USB_STORAGE := true
+
+TW_HAS_FASTBOOTD := true
 
 # Props
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
